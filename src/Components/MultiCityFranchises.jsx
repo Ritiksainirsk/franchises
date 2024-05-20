@@ -96,9 +96,9 @@ export default function MultiCityFranchises() {
         <div className="relative px-9">
           
           <div>
-            <h2 className="absolute top-[-14px] bg-black text-white left-8 px-5 py-1 rounded-lg font-bold" >
+            <p className="absolute py-2 top-[-15px] bg-black text-white left-8 px-5 rounded-lg font-bold" >
               TOP FRANCHISE OPPORTUNITIES
-            </h2>
+            </p>
             <div className="h-[1px] bg-gray-500 mb-1"></div>
             <div className="h-[1px] bg-gray-600"></div>
           </div>

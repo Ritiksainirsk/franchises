@@ -63,7 +63,7 @@ const ClientData = [
 export default function ClientTestimonials() {
   return (
     <>
-      <div className="bg-[#cee9ea] p-5 mb-8">
+      <div className="bg-[#cee9ea] py-5 mb-8">
         {/*  */}
         <div className="text-center my-5">
           <h2 className="font-bold text-[1.5rem] ">CLIENT TESTIMONIALS</h2>
@@ -72,7 +72,7 @@ export default function ClientTestimonials() {
         {/*  */}
         <div>
           <Carousel
-            className="py-6 "
+            className=" "
             responsive={responsive}
             autoPlay={true}
             infinite
@@ -100,7 +100,7 @@ export default function ClientTestimonials() {
 
 const VideoCard = ({ data }) => {
   return (
-    <div className="relative max-w-md w-96 mx-auto bg-white shadow-lg rounded-xl overflow-hidden p-5 pt-8 cursor-pointer">
+    <div className="relative max-w-md w-[22rem] mx-auto bg-white shadow-lg rounded-xl overflow-hidden p-5 pt-8 cursor-pointer">
       {/* Ribbon */}
       <div className="absolute top-[-15px] left-[-120px]">
         <div

@@ -12,8 +12,8 @@ export default function BrandRegisteration() {
     <>
       <div className="my-5 lg:mx-32 border-2 p-5 py-11 px-16 rounded-xl">
         <div className="relative py-9">
-          <p className="bg-black absolute top-5 rounded-2xl text-white px-5 font-bold tracking-wider w-[250px] py-2">
-            START YOUR OWN BUSINESS :
+          <p className="bg-black absolute top-5 rounded-2xl text-white px-4 font-bold tracking-wider w-[250px] py-2">
+            START YOUR OWN BUSINESS
           </p>
           <div className="bg-black h-[1px] mb-[3px]"></div>
           <div className="bg-black h-[1px]"></div>

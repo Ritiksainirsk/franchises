@@ -50,9 +50,9 @@ export default function PremiumFranchise() {
         <div className="relative px-9">
           
           <div>
-            <h2 className="absolute top-[-14px] bg-black text-white left-8 px-5 py-1 rounded-lg font-bold" >
+            <p className="absolute top-[-14px] py-2 bg-black text-white left-8 px-5 rounded-lg font-bold" >
             TOP PREMIUM FRANCHISE OPPORTUNITIES
-            </h2>
+            </p>
             <div className="h-[2px] bg-gray-500 mb-1"></div>
             <div className="h-[2px] bg-gray-500"></div>
           </div>

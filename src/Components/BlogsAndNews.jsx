@@ -15,14 +15,14 @@ export default function BlogsAndNews() {
       <div className=" m-8">
         <div className="relative px">
           <div>
-            <h2 className="absolute top-[-14px] bg-black text-white left-0 px-5 py-1 rounded-lg font-bold">
+            <p className="absolute top-[-14px] bg-black text-white left-0 px-5 py-2 rounded-lg font-bold">
             BLOGS AND NEWSVIEW ALL
-            </h2>
+            </p>
             <div className="h-[2px] bg-gray-500 mb-1"></div>
             <div className="h-[2px] bg-gray-500"></div>
-            <h2 className="cursor-pointer hover:right-[-4px] transition-all duration-300 absolute top-[-9px] bg-black text-white right-0 px-5 py-1 rounded-lg text-[12px] font-bold hidden md:block">
+            <p className="cursor-pointer hover:right-[-4px] transition-all duration-300 absolute top-[-9px] bg-black text-white right-0 px-5 py-1 rounded-lg text-[12px] font-bold hidden md:block">
                VIEW ALL
-            </h2>
+            </p>
           </div>
         </div>
         {/*  */}
