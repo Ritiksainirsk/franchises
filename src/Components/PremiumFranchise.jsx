@@ -115,8 +115,6 @@ export default function PremiumFranchise() {
             <Carousel
               infinite={true}
               autoPlay={true}
-              swipeable={true}
-              draggable={true}
               autoPlaySpeed={1500}
               responsive={responsive2}
               removeArrowOnDeviceType={["tablet", "mobile"]}

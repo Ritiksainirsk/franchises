@@ -161,11 +161,9 @@ export default function MultiCityFranchises() {
             <Carousel
               infinite={true}
               autoPlay={true}
-              swipeable={true}
-              draggable={true}
               autoPlaySpeed={1500}
               responsive={responsive2}
-              removeArrowOnDeviceType={["tablet", "mobile"]}
+              removeArrowOnDeviceType={["tablet", "mobile"]}  
               className="md:p-5"
             >
               {cardData.map((item, index) => {
