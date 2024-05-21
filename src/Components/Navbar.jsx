@@ -366,7 +366,7 @@ function Opportunities({ title, color }) {
           fullWidth={true}
           className="bg-black mt-3 py-2 text-white shadow-none text-[0.7rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
         >
-          Add to Cart
+          Explore All
         </Button>
         </div>
       </div>

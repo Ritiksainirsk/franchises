@@ -230,7 +230,7 @@ function EcommerceCard2({ data }) {
           fullWidth={true}
           className="bg-black text-white shadow-none text-[0.7rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
         >
-          Add to Cart
+          Explore
         </Button>
       </CardFooter>
     </Card>
