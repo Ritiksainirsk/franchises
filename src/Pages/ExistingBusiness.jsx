@@ -97,7 +97,7 @@ const AnimatedCard = ({data}) => {
       <div className="p-4">
         <h2 className="text-lg font-semibold text-gray-800">{data.title}</h2>
         <p className="mt-2 text-gray-600">{data.description}</p>
-        <button className="mt-4 px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded hover:bg-blue-400 focus:outline-none focus:bg-blue-400 transition duration-300">
+        <button className="mt-4 px-4 py-2 bg-black text-white text-sm rounded font-bold hover:bg-[#000000bd] focus:outline-none focus:bg-blue-400 transition duration-300">
           Get Free Info
         </button>
       </div>

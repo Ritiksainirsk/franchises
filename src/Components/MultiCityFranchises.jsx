@@ -30,18 +30,73 @@ const responsive = {
   },
 };
 
-const cardData = [
-  {img:"https://www.franchiseapply.com/admin/uploads/brand_registration/1715667821_2.jpeg",title:"VOC",text:"Automobiles"},
-  {img:"https://www.franchiseapply.com/admin/uploads/brand_registration/1715240484_2.jpg",title:"Shrishti International School",text:"Education"},
-  {img:"https://www.franchiseapply.com/admin/uploads/brand_registration/1714540700_2.png",title:"TYB10X",text:"Education"},
-  {img:"https://www.franchiseapply.com/admin/uploads/brand_registration/1714561600_2.jpg",title:"ABORA DECOR",text:"Retail"},
-  {img:"https://www.franchiseapply.com/admin/uploads/brand_registration/1713260357_2.jpg",title:"ZEROPAYY",text:"Retail"},
-  {img:"https://www.franchiseapply.com/admin/uploads/brand_registration/1713501514_2.",title:"City Samosa",text:"Retail"},
-  {img:"https://www.franchiseapply.com/admin/uploads/brand_registration/1710998957_2.jpg",title:"Welcome 36 Cafe",text:"Food and Beverage"},
-  {img:"https://www.franchiseapply.com/admin/uploads/brand_registration/1710389226_2.jpeg",title:"G Pizzeria",text:"Food and Beverage"},
-  {img:"https://www.franchiseapply.com/admin/uploads/brand_registration/1710482558_2.jpeg",title:"Famish Dessert Cafe",text:"Food and Beverage"},
-]
+const responsive2 = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 2,
+  },
+  desktop: {
+    breakpoint: { max: 1306, min: 1193 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1193, min: 464 },
+    items: 1.5,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
 
+const cardData = [
+  {
+    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1715667821_2.jpeg",
+    title: "VOC",
+    text: "Automobiles",
+  },
+  {
+    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1715240484_2.jpg",
+    title: "Shrishti International School",
+    text: "Education",
+  },
+  {
+    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1714540700_2.png",
+    title: "TYB10X",
+    text: "Education",
+  },
+  {
+    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1714561600_2.jpg",
+    title: "ABORA DECOR",
+    text: "Retail",
+  },
+  {
+    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1713260357_2.jpg",
+    title: "ZEROPAYY",
+    text: "Retail",
+  },
+  {
+    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1713501514_2.",
+    title: "City Samosa",
+    text: "Retail",
+  },
+  {
+    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1710998957_2.jpg",
+    title: "Welcome 36 Cafe",
+    text: "Food and Beverage",
+  },
+  {
+    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1710389226_2.jpeg",
+    title: "G Pizzeria",
+    text: "Food and Beverage",
+  },
+  {
+    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1710482558_2.jpeg",
+    title: "Famish Dessert Cafe",
+    text: "Food and Beverage",
+  },
+];
 
 export default function MultiCityFranchises() {
   return (
@@ -94,26 +149,33 @@ export default function MultiCityFranchises() {
 
       <div className="mt-28">
         <div className="relative px-9">
-          
           <div>
-            <p className="absolute py-2 top-[-15px] bg-black text-white left-8 px-5 rounded-lg font-bold" >
+            <p className="absolute py-2 top-[-15px] bg-black text-white left-8 px-5 rounded-lg font-bold">
               TOP FRANCHISE OPPORTUNITIES
             </p>
             <div className="h-[1px] bg-gray-500 mb-1"></div>
             <div className="h-[1px] bg-gray-600"></div>
           </div>
 
-
-          <div className="py-20 flex gap-6 flex-wrap justify-center"> 
-          {
-            cardData.map((item,index)=>{
-              return(
-                <>
-                <EcommerceCard2 data={item} />
-                </>
-              )
-            })
-          }
+          <div className="py-20 flex gap-6 flex-wrap justify-center">
+            <Carousel
+              infinite={true}
+              autoPlay={true}
+              swipeable={true}
+              draggable={true}
+              autoPlaySpeed={1500}
+              responsive={responsive2}
+              removeArrowOnDeviceType={["tablet", "mobile"]}
+              className="md:p-5"
+            >
+              {cardData.map((item, index) => {
+                return (
+                  <>
+                    <EcommerceCard2 data={item} />
+                  </>
+                );
+              })}
+            </Carousel>
           </div>
         </div>
       </div>
@@ -121,16 +183,15 @@ export default function MultiCityFranchises() {
   );
 }
 
-
-function EcommerceCard2({data}) {
+function EcommerceCard2({ data }) {
   return (
-    <Card className="w-80 border-2 ">
-      <CardHeader shadow={false} floated={false} className="h-40 shadow-md border-2 flex justify-center items-center">
-        <img
-          src={data.img}
-          alt="card-image"
-          className="h-28 object-contain"
-        />
+    <Card className="md:w-80 border-2 ">
+      <CardHeader
+        shadow={false}
+        floated={false}
+        className="h-40 shadow-md border-2 flex justify-center items-center"
+      >
+        <img src={data.img} alt="card-image" className="h-28 object-contain" />
       </CardHeader>
       <CardBody>
         <Typography
@@ -143,19 +204,25 @@ function EcommerceCard2({data}) {
 
         <h2 className="font-bold py-1 text-[1.1rem]">{data.title}</h2>
         <div className="mb-2 flex items-center justify-between">
-          <Typography color="blue-gray" className="font-medium text-[0.9rem] opacity-60">
-          Investment  
+          <Typography
+            color="blue-gray"
+            className="font-medium text-[0.9rem] opacity-60"
+          >
+            Investment
           </Typography>
           <Typography color="blue-gray" className="font-medium text-[0.9rem]">
-          INR 11 L - INR 2 CR
+            INR 11 L - INR 2 CR
           </Typography>
         </div>
         <div className="mb-2 flex items-center justify-between">
-          <Typography color="blue-gray" className="font-medium opacity-60 text-[0.9rem]">
-          Space req  
+          <Typography
+            color="blue-gray"
+            className="font-medium opacity-60 text-[0.9rem]"
+          >
+            Space req
           </Typography>
           <Typography color="blue-gray" className="font-medium text-[0.9rem]">
-          500 Sq Ft to 2000 Sq Ft
+            500 Sq Ft to 2000 Sq Ft
           </Typography>
         </div>
       </CardBody>
@@ -163,7 +230,7 @@ function EcommerceCard2({data}) {
         <Button
           ripple={false}
           fullWidth={true}
-          className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none text-[0.7rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
+          className="bg-black text-white shadow-none text-[0.7rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
         >
           Add to Cart
         </Button>
@@ -171,8 +238,6 @@ function EcommerceCard2({data}) {
     </Card>
   );
 }
-
-
 
 function EcommerceCard() {
   return (

@@ -167,7 +167,7 @@ export default function Gallary() {
       <h1 className="font-bold text-2xl">GALLERY</h1>
     </div>
     <div className="lg:m-12 md:m-5 m-1 my-10">
-      <Tabs value="html">
+      <Tabs value="html" >
         <TabsHeader defaultChecked={true}>
           {data.map(({ label, value }) => (
             <Tab key={value} value={value}>

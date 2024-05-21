@@ -27,7 +27,7 @@ export default function Footer() {
                 placeholder="Enter your email"
                 className="input input-bordered join-item text-[11px] md:text-[13px]"
               />
-              <button className="btn btn-primary join-item text-[11px] md:text-[13px]">Subscribe</button>
+              <button className="btn text-white hover:text-black join-item text-[11px] md:text-[13px] bg-black">Subscribe</button>
             </div>
           </fieldset>
         </form>
@@ -100,22 +100,22 @@ export default function Footer() {
         <nav>
           <h6 className="footer-title">Social</h6>
           <div className="grid grid-flow-col gap-4">
-            <a>
+            <a className="cursor-pointer text-[20px]">
               <FaYoutube />
             </a>
-            <a>
+            <a className="cursor-pointer text-[20px]">
               <FaInstagram />
             </a>
-            <a>
+            <a className="cursor-pointer text-[20px]">
               <FaFacebook />
             </a>
-            <a>
+            <a className="cursor-pointer text-[20px]">
               <FaSquareTwitter />
             </a>
-            <a>
+            <a className="cursor-pointer text-[20px]">
               <FaLinkedin />
             </a>
-            <a>
+            <a className="cursor-pointer text-[20px]">
               <FaWhatsapp />
             </a>
           </div>

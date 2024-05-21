@@ -332,7 +332,7 @@ export function Navbarr() {
               </div>
             </div>
             <div>
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn bg-black text-white shadow-none text-[0.8rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 hover:bg-black w-28">
                 Search
               </button>
             </div>
@@ -361,9 +361,13 @@ function Opportunities({ title, color }) {
         <div class="formainone flex flex-col text-center">
           <span> {title}</span>
           <strong className={`text-[${color}]`}>Opportunities</strong>
-          <Button variant="text" className="font-sans">
-            Explore All
-          </Button>
+          <Button
+          ripple={false}
+          fullWidth={true}
+          className="bg-black mt-3 py-2 text-white shadow-none text-[0.7rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
+        >
+          Add to Cart
+        </Button>
         </div>
       </div>
     </>
