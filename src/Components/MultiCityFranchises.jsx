@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
 import {
   Card,
   CardHeader,
@@ -30,73 +31,7 @@ const responsive = {
   },
 };
 
-const responsive2 = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 2,
-  },
-  desktop: {
-    breakpoint: { max: 1306, min: 1193 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 1193, min: 464 },
-    items: 1.5,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
 
-const cardData = [
-  {
-    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1715667821_2.jpeg",
-    title: "VOC",
-    text: "Automobiles",
-  },
-  {
-    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1715240484_2.jpg",
-    title: "Shrishti International School",
-    text: "Education",
-  },
-  {
-    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1714540700_2.png",
-    title: "TYB10X",
-    text: "Education",
-  },
-  {
-    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1714561600_2.jpg",
-    title: "ABORA DECOR",
-    text: "Retail",
-  },
-  {
-    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1713260357_2.jpg",
-    title: "ZEROPAYY",
-    text: "Retail",
-  },
-  {
-    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1713501514_2.",
-    title: "City Samosa",
-    text: "Retail",
-  },
-  {
-    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1710998957_2.jpg",
-    title: "Welcome 36 Cafe",
-    text: "Food and Beverage",
-  },
-  {
-    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1710389226_2.jpeg",
-    title: "G Pizzeria",
-    text: "Food and Beverage",
-  },
-  {
-    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1710482558_2.jpeg",
-    title: "Famish Dessert Cafe",
-    text: "Food and Beverage",
-  },
-];
 
 export default function MultiCityFranchises() {
   return (
@@ -110,11 +45,13 @@ export default function MultiCityFranchises() {
             UPCOMING MULTI-CITY FRANCHISE SHOW
           </h2>
           <Carousel
+          showDots={false}
+
             infinite={true}
             autoPlay={true}
-            autoPlaySpeed={3000}
+            autoPlaySpeed={1000}
             responsive={responsive}
-            className="p-5"
+            className="p-5 w-48"
           >
             <EcommerceCard />
             <EcommerceCard />
@@ -146,37 +83,6 @@ export default function MultiCityFranchises() {
       </div>
 
       {/*  */}
-
-      <div className="mt-28">
-        <div className="relative px-9">
-          <div>
-            <p className="absolute py-2 top-[-15px] bg-black text-white left-8 px-5 rounded-lg font-bold">
-              TOP FRANCHISE OPPORTUNITIES
-            </p>
-            <div className="h-[1px] bg-gray-500 mb-1"></div>
-            <div className="h-[1px] bg-gray-600"></div>
-          </div>
-
-          <div className="py-20 flex gap-6 flex-wrap justify-center">
-            <Carousel
-              infinite={true}
-              autoPlay={true}
-              autoPlaySpeed={1500}
-              responsive={responsive2}
-              removeArrowOnDeviceType={["tablet", "mobile"]}  
-              className="md:p-5"
-            >
-              {cardData.map((item, index) => {
-                return (
-                  <>
-                    <EcommerceCard2 data={item} />
-                  </>
-                );
-              })}
-            </Carousel>
-          </div>
-        </div>
-      </div>
     </>
   );
 }

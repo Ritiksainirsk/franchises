@@ -166,9 +166,11 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-       <Link to={"brand_registration"}> <ListItem className="flex items-center gap-2 py-2 pr-4">
-          Register your Brand
-        </ListItem>
+        <Link to={"brand_registration"}>
+          {" "}
+          <ListItem className="flex items-center gap-2 py-2 pr-4">
+            Register your Brand
+          </ListItem>
         </Link>
       </Typography>
       <NavListMenu Title={"Our Service"} data={OurServiceMenuItems} />
@@ -179,7 +181,12 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-       <Link to={"/blog"}> <ListItem className="flex items-center gap-2 py-2 pr-4">Blog</ListItem></Link>
+        <Link to={"/blog"}>
+          {" "}
+          <ListItem className="flex items-center gap-2 py-2 pr-4">
+            Blog
+          </ListItem>
+        </Link>
       </Typography>
       <Typography
         as="a"
@@ -189,9 +196,9 @@ function NavList() {
         className="font-medium"
       >
         <Link to={"interviews"}>
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
-          Interview
-        </ListItem>
+          <ListItem className="flex items-center gap-2 py-2 pr-4">
+            Interview
+          </ListItem>
         </Link>
       </Typography>
       <Typography
@@ -201,9 +208,11 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-       <Link to={"/videos"}> <ListItem className="flex items-center gap-2 py-2 pr-4">
-          Videos
-        </ListItem>
+        <Link to={"/videos"}>
+          {" "}
+          <ListItem className="flex items-center gap-2 py-2 pr-4">
+            Videos
+          </ListItem>
         </Link>
       </Typography>
       <Typography
@@ -213,9 +222,11 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-       <Link to={"/masterfranchise"}> <ListItem className="flex items-center gap-2 py-2 pr-4">
-          Master Franchise
-        </ListItem>
+        <Link to={"/masterfranchise"}>
+          {" "}
+          <ListItem className="flex items-center gap-2 py-2 pr-4">
+            Master Franchise
+          </ListItem>
         </Link>
       </Typography>
     </List>
@@ -233,13 +244,12 @@ export function Navbarr() {
       setIsFixed(scrollY > threshold);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   React.useEffect(() => {
     window.addEventListener(
@@ -250,46 +260,56 @@ export function Navbarr() {
 
   return (
     <>
-      <Navbar className={`px-4 py-2 z-50 ${isFixed ?"fixed top-0" :" "}` }>
-        <div className="flex items-center justify-between text-blue-gray-900">
-          <div className="hidden lg:block">
+      <div className="flex justify-center">
+        <Navbar
+          className={`px-4 py-2 z-50 w-full ${
+            isFixed ? "fixed top-0 m-auto" : " "
+          }`}
+        >
+          <div className="flex items-center justify-between text-blue-gray-900">
+            <div className="hidden lg:block">
+              <NavList />
+            </div>
+            <div className="hidden gap-2 lg:flex">
+              <Link to="/brand_registration">
+                {" "}
+                <Button variant="text" size="sm" color="blue-gray">
+                  Log In
+                </Button>
+              </Link>
+              <Link to="/brand_registration">
+                {" "}
+                <Button variant="gradient" size="sm">
+                  Register
+                </Button>
+              </Link>
+            </div>
+            <IconButton
+              variant="text"
+              color="blue-gray"
+              className="lg:hidden"
+              onClick={() => setOpenNav(!openNav)}
+            >
+              {openNav ? (
+                <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+              ) : (
+                <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+              )}
+            </IconButton>
+          </div>
+          <Collapse open={openNav}>
             <NavList />
-          </div>
-          <div className="hidden gap-2 lg:flex">
-           <Link to="/brand_registration"> <Button variant="text" size="sm" color="blue-gray">
-              Log In
-            </Button>
-            </Link>
-            <Link to="/brand_registration"> <Button variant="gradient" size="sm">
-              Register
-            </Button>
-            </Link>
-          </div>
-          <IconButton
-            variant="text"
-            color="blue-gray"
-            className="lg:hidden"
-            onClick={() => setOpenNav(!openNav)}
-          >
-            {openNav ? (
-              <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-            ) : (
-              <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-            )}
-          </IconButton>
-        </div>
-        <Collapse open={openNav}>
-          <NavList />
-          <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-            <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
-              Log In
-            </Button>
-            <Button variant="gradient" size="sm" fullWidth>
-              Sign In
-            </Button>
-          </div>
-        </Collapse>
-      </Navbar>
+            <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+              <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
+                Log In
+              </Button>
+              <Button variant="gradient" size="sm" fullWidth>
+                Sign In
+              </Button>
+            </div>
+          </Collapse>
+        </Navbar>
+      </div>
 
       {/*  */}
 
@@ -332,7 +352,10 @@ export function Navbarr() {
               </div>
             </div>
             <div>
-              <button type="submit" className="btn bg-black text-white shadow-none text-[0.8rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 hover:bg-black w-28">
+              <button
+                type="submit"
+                className="btn bg-black text-white shadow-none text-[0.8rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 hover:bg-black w-28"
+              >
                 Search
               </button>
             </div>
@@ -362,12 +385,12 @@ function Opportunities({ title, color }) {
           <span> {title}</span>
           <strong className={`text-[${color}]`}>Opportunities</strong>
           <Button
-          ripple={false}
-          fullWidth={true}
-          className="bg-black mt-3 py-2 text-white shadow-none text-[0.7rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-        >
-          Explore All
-        </Button>
+            ripple={false}
+            fullWidth={true}
+            className="bg-black mt-3 py-2 text-white shadow-none text-[0.7rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
+          >
+            Explore All
+          </Button>
         </div>
       </div>
     </>

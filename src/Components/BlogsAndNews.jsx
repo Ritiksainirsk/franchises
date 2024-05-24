@@ -28,7 +28,7 @@ export default function BlogsAndNews() {
         {/*  */}
         <div className="lg:grid lg:grid-cols-3 gap-7 my-14">
           <Popular />
-          <div className="col-span-2 bg-white rounded-2xl shadow-xl border-2 lg:p-8 lg:h-[850px]">
+          <div className="col-span-2 bg-white rounded-2xl shadow-xl border-2 lg:p-8 lg:h-[890px]">
             <Card className="w-full max-w-[100%] flex-col h-[100%] shadow-none">
               <div className="">
                 <img

@@ -1,6 +1,6 @@
 import React from "react";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import {
   Card,
@@ -11,20 +11,39 @@ import {
   Button,
 } from "@material-tailwind/react";
 
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 1306 },
+    items: 4,
+  },
+  desktop: {
+    breakpoint: { max: 1306, min: 1193 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1193, min: 464 },
+    items: 1.5,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
 
 const cardData = [
   {
-    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1675920968_1.jpg",
-    title: "Kayastra",
+    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1715667821_2.jpeg",
+    title: "VOC",
     text: "Automobiles",
   },
   {
-    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1490248484_1.png",
-    title: "Jetking",
+    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1715240484_2.jpg",
+    title: "Shrishti International School",
     text: "Education",
   },
   {
-    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1690620187_1.jpg",
+    img: "https://www.franchiseapply.com/admin/uploads/brand_registration/1714540700_2.png",
     title: "TYB10X",
     text: "Education",
   },
@@ -60,52 +79,33 @@ const cardData = [
   },
 ];
 
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 1306 },
-    items: 4,
-  },
-  desktop: {
-    breakpoint: { max: 1306, min: 1193 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 1193, min: 464 },
-    items: 1.5,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
-
-export default function PremiumFranchise() {
+export default function TopFranchiseOpportunieties() {
   return (
-    <>
+    <div>
       <div className="mt-28">
         <div className="relative px-9">
           <div>
-            <p className="absolute top-[-14px] py-2 bg-black text-white left-8 px-5 rounded-lg font-bold">
-              TOP PREMIUM FRANCHISE OPPORTUNITIES
+            <p className="absolute py-2 top-[-15px] bg-black text-white left-8 px-5 rounded-lg font-bold">
+              TOP FRANCHISE OPPORTUNITIES
             </p>
-            <div className="h-[2px] bg-gray-500 mb-1"></div>
-            <div className="h-[2px] bg-gray-500"></div>
+            <div className="h-[1px] bg-gray-500 mb-1"></div>
+            <div className="h-[1px] bg-gray-600"></div>
           </div>
 
           <div className="py-20">
             <Carousel
-              infinite={true}
-              autoPlay={true}
-              autoPlaySpeed={1500}
-              responsive={responsive}
-              removeArrowOnDeviceType={["tablet", "mobile"]}
-              className="md:p-5"
+                 className=" "
+                 responsive={responsive}
+                 autoPlay={true}
+                 infinite
+                 swipeable={true}
+                 draggable={true}
+                 autoPlaySpeed={3000}
             >
               {cardData.map((item, index) => {
                 return (
                   <>
-                    <EcommerceCard2 data={item} />
+                    <EcommerceCard2 data={item} key={index}/>
                   </>
                 );
               })}
@@ -113,43 +113,49 @@ export default function PremiumFranchise() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
 function EcommerceCard2({ data }) {
   return (
-    <Card className="md:w-80 bg-white shadow-lg rounded-lg overflow-hidden  border-gray-200 border-2">
+    <Card className="md:w-80 border-2 ">
       <CardHeader
         shadow={false}
         floated={false}
-        className="h-40 flex justify-center items-center bg-gray-100"
+        className="h-40 shadow-md border-2 flex justify-center items-center"
       >
         <img src={data.img} alt="card-image" className="h-28 object-contain" />
       </CardHeader>
-      <CardBody className="p-6">
+      <CardBody>
         <Typography
           variant="small"
-          className="font-normal text-gray-500 text-[0.8rem] mb-2"
+          color="gray"
+          className="font-normal opacity-75 text-[0.8rem]"
         >
           {data.text}
         </Typography>
-        <h2 className="font-bold py-1 text-[1.3rem] text-black">
-          {data.title}
-        </h2>
+
+        <h2 className="font-bold py-1 text-[1.1rem]">{data.title}</h2>
         <div className="mb-2 flex items-center justify-between">
-          <Typography className="font-medium text-[0.9rem] text-gray-700">
+          <Typography
+            color="blue-gray"
+            className="font-medium text-[0.9rem] opacity-60"
+          >
             Investment
           </Typography>
-          <Typography className="font-medium text-[0.9rem] text-black">
+          <Typography color="blue-gray" className="font-medium text-[0.9rem]">
             INR 11 L - INR 2 CR
           </Typography>
         </div>
         <div className="mb-2 flex items-center justify-between">
-          <Typography className="font-medium text-[0.9rem] text-gray-700">
+          <Typography
+            color="blue-gray"
+            className="font-medium opacity-60 text-[0.9rem]"
+          >
             Space req
           </Typography>
-          <Typography className="font-medium text-[0.9rem] text-black">
+          <Typography color="blue-gray" className="font-medium text-[0.9rem]">
             500 Sq Ft to 2000 Sq Ft
           </Typography>
         </div>
@@ -158,7 +164,7 @@ function EcommerceCard2({ data }) {
         <Button
           ripple={false}
           fullWidth={true}
-          className="bg-black text-white shadow-none text-[0.7rem] hover:bg-gray-800 transition-transform duration-200 ease-in-out"
+          className="bg-black text-white shadow-none text-[0.7rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
         >
           Explore
         </Button>
@@ -166,4 +172,3 @@ function EcommerceCard2({ data }) {
     </Card>
   );
 }
-

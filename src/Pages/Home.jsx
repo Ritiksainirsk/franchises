@@ -6,12 +6,16 @@ import PremiumFranchise from "../Components/PremiumFranchise";
 import ClientTestimonials from "../Components/ClientTestimonials";
 import Gallarty from "../Components/Gallary";
 import FranchiseMagazine from "../Components/FranchiseMagazine";
+import Categorys from "../Components/Categorys";
+import TopFranchiseOpportunieties from "../Components/TopFranchiseOpportunieties";
 
 export default function Home() {
   return (
     <div>
+      <Categorys/>
       <SideBar/>
       <MultiCityFranchises />
+      <TopFranchiseOpportunieties/>
       <BlogsAndNews />
       <PremiumFranchise />
       <ClientTestimonials />
@@ -20,3 +24,4 @@ export default function Home() {
     </div>
   );
 }
+
