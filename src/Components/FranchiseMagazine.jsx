@@ -33,7 +33,7 @@ export default function FranchiseMagazine() {
   return (
     <div>
       {/*  */}
-      <div className="text-center mt-20">
+      <div className="text-center mt-20 mb-12">
         <h1 className="font-bold text-2xl">Franchise Magazine</h1>
       </div>
       {/*  */}
