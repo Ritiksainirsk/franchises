@@ -1,6 +1,6 @@
 import React from "react";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import {
   Card,
@@ -10,7 +10,6 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
-
 
 const cardData = [
   {
@@ -119,7 +118,7 @@ export default function PremiumFranchise() {
 
 function EcommerceCard2({ data }) {
   return (
-    <Card className="md:w-80 bg-white shadow-lg rounded-lg overflow-hidden  border-gray-200 border-2">
+    <Card className="md:w-80 bg-white shadow-lg rounded-lg overflow-hidden border-gray-200 border-2">
       <CardHeader
         shadow={false}
         floated={false}
@@ -166,4 +165,3 @@ function EcommerceCard2({ data }) {
     </Card>
   );
 }
-

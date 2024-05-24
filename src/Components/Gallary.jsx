@@ -185,7 +185,7 @@ export default function Gallary() {
               {images?.map(({ imageLink }, index) => (
                 <div key={index} className="">
                   <img
-                    className="h-44 w-full max-w-full rounded-lg object-center"
+                    className="h-auto w-full max-w-full rounded-lg object-center"
                     src={imageLink}
                     alt="image-photo"
                   />
