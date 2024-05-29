@@ -63,7 +63,7 @@ const ClientData = [
 export default function ClientTestimonials() {
   return (
     <>
-      <div className="bg-[#cee9ea] py-5 mb-8">
+      <div className="bg-[#cee9ea] py-5 pb-16 mb-8">
         {/*  */}
         <div className="text-center my-5">
           <h2 className="font-bold text-[1.5rem] ">CLIENT TESTIMONIALS</h2>

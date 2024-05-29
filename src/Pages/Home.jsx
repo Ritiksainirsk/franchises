@@ -16,8 +16,8 @@ export default function Home() {
       <SideBar/>
       <MultiCityFranchises />
       <TopFranchiseOpportunieties/>
-      <BlogsAndNews />
       <PremiumFranchise />
+      <BlogsAndNews />
       <ClientTestimonials />
       <Gallarty />
       <FranchiseMagazine />

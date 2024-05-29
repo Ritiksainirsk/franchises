@@ -18,8 +18,8 @@ const responsive = {
     items: 2,
   },
   desktop: {
-    breakpoint: { max: 1306, min: 1193 },
-    items: 2,
+    breakpoint: { max: 3000, min: 1193 },
+    items: 2.2,
   },
   tablet: {
     breakpoint: { max: 1193, min: 464 },
@@ -46,12 +46,11 @@ export default function MultiCityFranchises() {
           </h2>
           <Carousel
           showDots={false}
-
             infinite={true}
             autoPlay={true}
             autoPlaySpeed={1000}
             responsive={responsive}
-            className="p-5 w-48"
+            className="p-5"
           >
             <EcommerceCard />
             <EcommerceCard />
@@ -72,7 +71,7 @@ export default function MultiCityFranchises() {
             autoPlay={true}
             autoPlaySpeed={3000}
             responsive={responsive}
-            className="p-5"
+            className="p-5 "
           >
             <EcommerceCard />
             <EcommerceCard />
@@ -87,61 +86,6 @@ export default function MultiCityFranchises() {
   );
 }
 
-function EcommerceCard2({ data }) {
-  return (
-    <Card className="md:w-80 border-2 ">
-      <CardHeader
-        shadow={false}
-        floated={false}
-        className="h-40 shadow-md border-2 flex justify-center items-center"
-      >
-        <img src={data.img} alt="card-image" className="h-28 object-contain" />
-      </CardHeader>
-      <CardBody>
-        <Typography
-          variant="small"
-          color="gray"
-          className="font-normal opacity-75 text-[0.8rem]"
-        >
-          {data.text}
-        </Typography>
-
-        <h2 className="font-bold py-1 text-[1.1rem]">{data.title}</h2>
-        <div className="mb-2 flex items-center justify-between">
-          <Typography
-            color="blue-gray"
-            className="font-medium text-[0.9rem] opacity-60"
-          >
-            Investment
-          </Typography>
-          <Typography color="blue-gray" className="font-medium text-[0.9rem]">
-            INR 11 L - INR 2 CR
-          </Typography>
-        </div>
-        <div className="mb-2 flex items-center justify-between">
-          <Typography
-            color="blue-gray"
-            className="font-medium opacity-60 text-[0.9rem]"
-          >
-            Space req
-          </Typography>
-          <Typography color="blue-gray" className="font-medium text-[0.9rem]">
-            500 Sq Ft to 2000 Sq Ft
-          </Typography>
-        </div>
-      </CardBody>
-      <CardFooter className="pt-0">
-        <Button
-          ripple={false}
-          fullWidth={true}
-          className="bg-black text-white shadow-none text-[0.7rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-        >
-          Explore
-        </Button>
-      </CardFooter>
-    </Card>
-  );
-}
 
 function EcommerceCard() {
   return (

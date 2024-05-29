@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <>
       {/*  */}
-      <footer className="footer p-10 bg-base-200 text-base-content">
+      <footer className="footer p-10 bg-blue-gray-100 text-black">
         <nav className="hidden md:block">
           <h6 className="footer-title">BROWSE BY LOCATION</h6>
           <p className="leading-[22px] tracking-wider"><a href="">Andhra Pradesh</a>|<a href="">Arunachal Pradesh</a>|<a href="">Assam</a>|<a href="">Bihar</a>|Chandigarh|Chhattisgarh|Daman Diu|Goa|Gujarat|Haryana|Himachal Pradesh|Jammu Kashmir|Jharkhand|Karnataka|Kerala|Lakshadweep|Madhya Pradesh|Maharashtra|Manipur|Meghalaya|Mizoram|Nagaland|New Delhi|Orissa|Pondicherry|Punjab|Rajasthan|Sikkim|Tamil Nadu|Tripura|Uttaranchal|Uttar Pradesh|West Bengal</p>
@@ -27,13 +27,13 @@ export default function Footer() {
                 placeholder="Enter your email"
                 className="input input-bordered join-item text-[11px] md:text-[13px]"
               />
-              <button className="btn text-white hover:text-black join-item text-[11px] md:text-[13px] bg-black">Subscribe</button>
+              <button className="btn text-white hover:text-black join-item text-[11px] md:text-[13px] bg-black border-none">Subscribe</button>
             </div>
           </fieldset>
         </form>
       </footer>
       {/*  */}
-      <footer className="footer p-10 bg-base-200 text-base-content">
+      <footer className="footer p-10 bg-blue-gray-100 text-black">
         <aside>
           <div className="p-3 bg-white w-[200px] h-[270px] rounded-lg">
             <img
@@ -49,7 +49,7 @@ export default function Footer() {
         </aside>
         <nav>
           <h6 className="footer-title">Our Services</h6>
-          <a className="link link-hover">Brand Franchise Business Model</a>
+          <a className="link link-hover " style={{textDecoration:"none",listStyle:"none"}}>Brand Franchise Business Model</a>
           <a className="link link-hover">Franchise Consultancy</a>
           <a className="link link-hover">
             Marketing & Lead Generation for Brands
@@ -84,7 +84,7 @@ export default function Footer() {
       </footer>
       {/*  */}
       {/*  */}
-      <footer className="footer p-10 bg-base-300 text-base-content">
+      <footer className="footer p-10 bg-blue-gray-100 text-black">
         <nav>
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>
@@ -122,7 +122,7 @@ export default function Footer() {
         </nav>
       </footer>
       {/*  */}
-      <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+      <footer className="footer footer-center p-4 bg-gray-600 text-white font-bold">
         <aside>
           <p>Copyright © 2009 - 2024 Franchise</p>
         </aside>

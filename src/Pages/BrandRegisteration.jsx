@@ -10,7 +10,7 @@ import {
 export default function BrandRegisteration() {
   return (
     <>
-      <div className="my-5 lg:mx-32 border-2 p-5 py-11 px-16 rounded-xl">
+      <div className="my-5 lg:mx-32 border-2 p-5 py-11 px-16 rounded-xl bg-blue-gray-100">
         <div className="relative py-9">
           <p className="bg-black absolute top-5 rounded-2xl text-white px-4 font-bold tracking-wider w-[250px] py-2">
             START YOUR OWN BUSINESS

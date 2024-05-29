@@ -82,7 +82,7 @@ const responsive = {
 export default function PremiumFranchise() {
   return (
     <>
-      <div className="mt-28">
+      <div className="">
         <div className="relative px-9">
           <div>
             <p className="absolute top-[-14px] py-2 bg-black text-white left-8 px-5 rounded-lg font-bold">
@@ -118,18 +118,18 @@ export default function PremiumFranchise() {
 
 function EcommerceCard2({ data }) {
   return (
-    <Card className="md:w-80 bg-white shadow-lg rounded-lg overflow-hidden border-gray-200 border-2">
+    <Card className="md:w-80 bg-gradient-to-br from-gray-100 to-gray-300 shadow-lg rounded-lg overflow-hidden border-gray-200 border-2 hover:shadow-2xl transition-shadow duration-300 ease-in-out">
       <CardHeader
         shadow={false}
         floated={false}
-        className="h-40 flex justify-center items-center bg-gray-100"
+        className="h-40 flex justify-center items-center bg-gray-200"
       >
         <img src={data.img} alt="card-image" className="h-28 object-contain" />
       </CardHeader>
       <CardBody className="p-6">
         <Typography
           variant="small"
-          className="font-normal text-gray-500 text-[0.8rem] mb-2"
+          className="font-normal text-gray-700 text-[0.8rem] mb-2"
         >
           {data.text}
         </Typography>
@@ -137,7 +137,7 @@ function EcommerceCard2({ data }) {
           {data.title}
         </h2>
         <div className="mb-2 flex items-center justify-between">
-          <Typography className="font-medium text-[0.9rem] text-gray-700">
+          <Typography className="font-medium text-[0.9rem] text-gray-800">
             Investment
           </Typography>
           <Typography className="font-medium text-[0.9rem] text-black">
@@ -145,7 +145,7 @@ function EcommerceCard2({ data }) {
           </Typography>
         </div>
         <div className="mb-2 flex items-center justify-between">
-          <Typography className="font-medium text-[0.9rem] text-gray-700">
+          <Typography className="font-medium text-[0.9rem] text-gray-800">
             Space req
           </Typography>
           <Typography className="font-medium text-[0.9rem] text-black">
@@ -157,7 +157,7 @@ function EcommerceCard2({ data }) {
         <Button
           ripple={false}
           fullWidth={true}
-          className="bg-black text-white shadow-none text-[0.7rem] hover:bg-gray-800 transition-transform duration-200 ease-in-out"
+          className="bg-black text-white shadow-none text-[0.7rem] hover:bg-gray-800 hover:scale-105 transition-transform duration-200 ease-in-out"
         >
           Explore
         </Button>
