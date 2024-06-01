@@ -12,13 +12,13 @@ import TopFranchiseOpportunieties from "../Components/TopFranchiseOpportunieties
 export default function Home() {
   return (
     <div>
-      <Categorys/>
       <SideBar/>
       <MultiCityFranchises />
       <TopFranchiseOpportunieties/>
       <PremiumFranchise />
       <BlogsAndNews />
       <ClientTestimonials />
+      <Categorys/>
       <Gallarty />
       <FranchiseMagazine />
     </div>
