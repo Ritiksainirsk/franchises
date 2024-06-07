@@ -40,10 +40,9 @@ export default function FranchiseMagazine() {
       <div>
         <Carousel
           className="py-10 px-10"
-          swipeable={false}
-          draggable={false}
           showDots={true}
           responsive={responsive}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
           ssr={true}
           infinite={true}
           autoPlay={true}

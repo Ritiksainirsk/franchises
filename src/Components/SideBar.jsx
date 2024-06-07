@@ -18,7 +18,7 @@ export default function SideBar() {
   return (
     <div>
       <div className=" p-5 px-11 md:flex gap-5">
-        <div className="drawer lg:drawer-open lg:h-[350px] z-10 w-auto">
+        <div className="drawer lg:drawer-open lg:h-[350px] z-50 w-auto">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col items-center justify-center">
             {/* Page content here */}

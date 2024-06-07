@@ -36,10 +36,10 @@ const responsive = {
 export default function MultiCityFranchises() {
   return (
     <>
-      <div className="lg:flex gap-3 m-5">
-        <div className="md:w-[50%] p-4 shadow-2xl rounded-2xl border-2 py-7">
+      <div className="lg:flex lg:gap-3 m-5">
+        <div className="md:w-[50%] p-4 lg:shadow-2xl rounded-2xl border-2 py-7">
           <h2
-            className="text-center mb-5 font-bold text-lg font-sans border-2 rounded-2xl"
+            className="text-center mb-5 font-bold md:text-lg font-sans border-2 rounded-2xl"
             style={{ textShadow: "3px 2px #b9fdff" }}
           >
             UPCOMING MULTI-CITY FRANCHISE SHOW
@@ -50,6 +50,7 @@ export default function MultiCityFranchises() {
             autoPlay={true}
             autoPlaySpeed={1000}
             responsive={responsive}
+            removeArrowOnDeviceType={["tablet", "mobile"]}
             className="p-5"
           >
             <EcommerceCard />
@@ -59,9 +60,9 @@ export default function MultiCityFranchises() {
           </Carousel>
         </div>
 
-        <div className=" md:w-[50%] p-4 shadow-2xl rounded-2xl border-2 py-7">
+        <div className=" md:w-[50%] p-4 lg:shadow-2xl rounded-2xl border-2 py-7">
           <h2
-            className="text-center mb-5 font-bold text-lg font-sans border-2 rounded-2xl"
+            className="text-center mb-5 font-bold md:text-lg  font-sans border-2 rounded-2xl"
             style={{ textShadow: "3px 2px #b9fdff" }}
           >
             PAST MULTI-CITY FRANCHISE SHOW
@@ -71,7 +72,8 @@ export default function MultiCityFranchises() {
             autoPlay={true}
             autoPlaySpeed={3000}
             responsive={responsive}
-            className="p-5 "
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            className=""
           >
             <EcommerceCard />
             <EcommerceCard />
@@ -89,7 +91,7 @@ export default function MultiCityFranchises() {
 
 function EcommerceCard() {
   return (
-    <Card className="w-64 shadow-md">
+    <Card className="w-64 shadow-md m-6">
       <CardHeader
         shadow={true}
         floated={true}

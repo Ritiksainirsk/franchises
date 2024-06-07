@@ -240,7 +240,7 @@ export function Navbarr() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const threshold = 400; // Adjust this value as needed
+      const threshold = 700; // Adjust this value as needed
       setIsFixed(scrollY > threshold);
     };
 
@@ -262,7 +262,7 @@ export function Navbarr() {
     <>
       <div className="flex justify-center">
         <Navbar
-          className={`px-4 py-2 z-50 w-full ${
+          className={`px-4 py-2 z-40 w-full ${
             isFixed ? "fixed top-0 m-auto" : " "
           }`}
         >

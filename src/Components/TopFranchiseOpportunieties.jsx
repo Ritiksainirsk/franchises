@@ -99,6 +99,7 @@ export default function TopFranchiseOpportunieties() {
                  autoPlay={true}
                  infinite
                  swipeable={true}
+                 removeArrowOnDeviceType={["tablet", "mobile"]}
                  draggable={true}
                  autoPlaySpeed={3000}
             >

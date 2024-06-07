@@ -79,6 +79,7 @@ export default function ClientTestimonials() {
             swipeable={true}
             draggable={true}
             autoPlaySpeed={3000}
+            removeArrowOnDeviceType={["tablet", "mobile"]}
           >
             {ClientData.map((item, index) => {
               return (
