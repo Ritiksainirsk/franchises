@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import { Avatar } from "@material-tailwind/react";
 
 export default function Interviews() {
   return (
     <div>
       <div className="text-center my-12">
-        <h1 className="font-bold text-2xl">INTERVIEWS</h1>
+        <h1 className="font-bold text-2xl text-white">INTERVIEWS</h1>
       </div>
       <div>
         <Card1
@@ -72,9 +75,13 @@ export default function Interviews() {
 const Card1 = ({ url, name }) => {
   const [showMore, setShowMore] = useState(false);
 
+  useEffect(() => {
+    AOS.init({duration: 2000})
+  }, []);
+
   return (
     <>
-      <div className="grid md:grid-cols-4 items-start gap-3 border-2 my-10 mx-4 p-7 justify-center rounded-lg">
+      <div className="grid md:grid-cols-4 items-start gap-3 border-[1px] shadow-xl my-10 mx-4 p-7 justify-center rounded-lg" data-aos="fade-right">
         <div className="md:w-44 md:h-44 w-36 h-36 md:col-span-1 md:mt-8 md:ml-5">
           <Avatar
             src={url}
@@ -84,7 +91,7 @@ const Card1 = ({ url, name }) => {
           />
         </div>
 
-        <div className="md:col-span-3">
+        <div className="md:col-span-3 text-white">
           <h2 className="font-bold">
             Q.1. Elaborate about the concept of Peas in pod?
           </h2>
@@ -213,7 +220,7 @@ const Card2 = ({ url, name }) => {
 
   return (
     <>
-      <div className="md:grid flex flex-col-reverse md:grid-cols-4 items-start gap-3 border-2 my-10 mx-4 md:p-7 p-4 justify-center rounded-lg">
+      <div className="md:grid flex flex-col-reverse md:grid-cols-4 items-start gap-3 border-[1px] text-white shadow-xl my-10 mx-4 md:p-7 p-4 justify-center rounded-lg"  data-aos="fade-left">
         <div className="md:col-span-3">
           <h2 className="font-bold">
             Q.1. Elaborate about the concept of Peas in pod?

@@ -10,6 +10,7 @@ import Categorys from "../Components/Categorys";
 import TopFranchiseOpportunieties from "../Components/TopFranchiseOpportunieties";
 
 export default function Home() {
+
   return (
     <div>
       <SideBar/>

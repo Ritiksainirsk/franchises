@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -80,19 +84,27 @@ const responsive = {
 };
 
 export default function PremiumFranchise() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
       <div className="">
         <div className="relative px-9">
-          <div>
-            <p className="absolute top-[-14px] py-2 bg-black text-white left-8 px-5 rounded-lg font-bold">
+          <div data-aos="flip-up">
+            <p className="absolute top-[-14px] py-2 bg-black text-white px-5 rounded-lg font-bold">
               TOP PREMIUM FRANCHISE OPPORTUNITIES
             </p>
-            <div className="h-[2px] bg-gray-500 mb-1"></div>
-            <div className="h-[2px] bg-gray-500"></div>
+            <div className="h-[2px] bg-white mb-1"></div>
+            <div className="h-[2px] bg-white"></div>
           </div>
 
-          <div className="py-20">
+          <div className="py-20" 
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
             <Carousel
               infinite={true}
               autoPlay={true}

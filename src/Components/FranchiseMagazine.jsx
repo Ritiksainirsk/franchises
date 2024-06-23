@@ -1,6 +1,9 @@
-import React, { useState } from "react";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const responsive = {
   desktop: {
@@ -21,23 +24,26 @@ const responsive = {
 };
 
 export default function FranchiseMagazine() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
 
-    const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
-    const toggleExpansion = () => {
-      setIsExpanded(!isExpanded);
-    };
+  const toggleExpansion = () => {
+    setIsExpanded(!isExpanded);
+  };
 
-    const [showtext,setShowText] = useState(false) 
+  const [showtext, setShowText] = useState(false);
 
   return (
     <div>
       {/*  */}
-      <div className="text-center mt-20 mb-12">
-        <h1 className="font-bold text-2xl">Franchise Magazine</h1>
+      <div className="text-center mt-20 mb-12" data-aos="flip-left">
+        <h1 className="font-bold text-2xl text-white">Franchise Magazine</h1>
       </div>
       {/*  */}
-      <div>
+      <div data-aos="fade-right">
         <Carousel
           className="py-10 px-10"
           showDots={true}
@@ -103,9 +109,19 @@ export default function FranchiseMagazine() {
       </div>
       {/*  */}
 
-      <div className="md:p-10 p-5 md:px-14 tracking-widest text-[10px] md:text-[15px]">
-        <h1 className="text-2xl font-bold my-3 text-[1.3rem] md:text-[1.5rem]">Top Business Franchise Opportunities In India: Franchise Apply</h1>
-        <p className="text-gray-600 ">
+      <div
+        className="md:p-10 p-5 md:px-14 tracking-widest text-[10px] md:text-[15px] text-white"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
+        <h1
+          className="text-2xl font-bold my-3 text-[1.3rem] md:text-[1.5rem]"
+          data-aos="flip-down"
+        >
+          Top Business Franchise Opportunities In India: Franchise Apply
+        </h1>
+        <p className="text-white">
           Franchise Apply is your one-stop source where you can grab amazing
           franchise opportunities in India. We are here to help you start your
           own profitable franchise business in India and use test-and-tried ways
@@ -117,45 +133,53 @@ export default function FranchiseMagazine() {
           spectrum of sectors where you can easily find the reliable options for
           the franchise in India with low investment.
         </p>
-        {showtext && <span>
-          <p className="my-4 text-gray-600">
-            We have come up as one such destination where investors, startups,
-            distributors, dealers, franchise prospect seekers can seek
-            opportunities to start the best franchise business in India. Our
-            main objective is to present a dependable platform where franchisors
-            and entrepreneurs can get connected and invest in a profitable
-            franchise in India. We have been delivering the choices for ones,
-            looking for information on low cost franchise industries. To step
-            into the world of the franchise business, you can always count up on
-            us, as we present you with the most exciting business opportunities
-            to establish your own business.
-          </p>
-          <h2 className="text-2xl font-bold my-3 text-[1.3rem] md:text-[1.5rem]">Grab Abundance of Franchise Opportunities Here!</h2>
-          <p className="my-4 text-gray-600">
-            If you are someone, who wants to reap the benefits out of franchise
-            opportunities in India, Franchise Apply is certainly the right
-            place, to begin with. Being an investor if you think that is
-            fruitful to associate with a well-established brand, then you will
-            find us the perfect companion to execute your further plans. We
-            bring you a chance to connect with a top franchise in India and seek
-            the opportunity to grow as an investor. Whether you want to join us
-            as an investor or want to advertise your profitable franchise in
-            India, we are always ready to help. You can browse through our huge
-            list to seize the opportunity to start the best franchise business
-            in India. At Franchise Apply, we offer oodles of options that match
-            your needs for starting with low cost franchise. In fact, you can
-            gather reliable information about the specific franchise in India
-            with low investment here. Since we always believe in assisting
-            everyone to grow, you can always count on us for the opportunities
-            that we bring to the table for you. Check the franchise listed here
-            and choose to take benefits out of what suits you the most.
-          </p>
-        </span>}
+        {showtext && (
+          <span>
+            <p className="my-4 text-white">
+              We have come up as one such destination where investors, startups,
+              distributors, dealers, franchise prospect seekers can seek
+              opportunities to start the best franchise business in India. Our
+              main objective is to present a dependable platform where
+              franchisors and entrepreneurs can get connected and invest in a
+              profitable franchise in India. We have been delivering the choices
+              for ones, looking for information on low cost franchise
+              industries. To step into the world of the franchise business, you
+              can always count up on us, as we present you with the most
+              exciting business opportunities to establish your own business.
+            </p>
+            <h2 className="text-2xl font-bold my-3 text-[1.3rem] md:text-[1.5rem]">
+              Grab Abundance of Franchise Opportunities Here!
+            </h2>
+            <p className="my-4 text-white">
+              If you are someone, who wants to reap the benefits out of
+              franchise opportunities in India, Franchise Apply is certainly the
+              right place, to begin with. Being an investor if you think that is
+              fruitful to associate with a well-established brand, then you will
+              find us the perfect companion to execute your further plans. We
+              bring you a chance to connect with a top franchise in India and
+              seek the opportunity to grow as an investor. Whether you want to
+              join us as an investor or want to advertise your profitable
+              franchise in India, we are always ready to help. You can browse
+              through our huge list to seize the opportunity to start the best
+              franchise business in India. At Franchise Apply, we offer oodles
+              of options that match your needs for starting with low cost
+              franchise. In fact, you can gather reliable information about the
+              specific franchise in India with low investment here. Since we
+              always believe in assisting everyone to grow, you can always count
+              on us for the opportunities that we bring to the table for you.
+              Check the franchise listed here and choose to take benefits out of
+              what suits you the most.
+            </p>
+          </span>
+        )}
 
-        <button onClick={()=> setShowText(!showtext)} className="font-bold my-5">{showtext ? "Show Less[-]" : "Show More[+]"}</button>
+        <button
+          onClick={() => setShowText(!showtext)}
+          className="font-bold my-5"
+        >
+          {showtext ? "Show Less[-]" : "Show More[+]"}
+        </button>
       </div>
-
-
     </div>
   );
 }

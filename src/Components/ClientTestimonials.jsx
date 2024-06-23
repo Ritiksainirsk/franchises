@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { TiStarFullOutline } from "react-icons/ti";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -61,16 +64,22 @@ const ClientData = [
 ];
 
 export default function ClientTestimonials() {
+
+  
+  useEffect(() => {
+    AOS.init({duration: 2000})
+  }, []);
+
   return (
     <>
-      <div className="bg-[#cee9ea] py-5 pb-16 mb-8">
+      <div className=" py-5 pb-16 mb-8">
         {/*  */}
-        <div className="text-center my-5">
-          <h2 className="font-bold text-[1.5rem] ">CLIENT TESTIMONIALS</h2>
+        <div className="text-center my-5" data-aos="flip-up">
+          <h2 className="font-bold text-[1.5rem] text-white">CLIENT TESTIMONIALS</h2>
         </div>
         {/*  */}
         {/*  */}
-        <div>
+        <div data-aos="fade-right">
           <Carousel
             className=" "
             responsive={responsive}

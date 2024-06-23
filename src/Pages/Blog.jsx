@@ -50,7 +50,7 @@ function ContentCard({ img, title, desc }) {
 
 export default function Blog() {
   return (
-    <div>
+    <div className="">
       <section className="container mx-auto md:p-2 p-5 lg:py-6">
         <Typography
           variant="h2"

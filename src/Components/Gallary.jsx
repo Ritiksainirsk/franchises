@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import {
     Tabs,
     TabsHeader,
@@ -161,12 +164,17 @@ export default function Gallary() {
         },
       ];
 
+      
+  useEffect(() => {
+    AOS.init({duration: 2000})
+  }, []);
+
   return (
     <>
-    <div className="text-center mt-14">
-      <h1 className="font-bold text-2xl">GALLERY</h1>
+    <div className="text-center mt-14" data-aos="zoom-in-up">
+      <h1 className="font-bold text-2xl text-white">GALLERY</h1>
     </div>
-    <div className="lg:m-12 md:m-5 m-1 my-10">
+    <div className="lg:m-12 md:m-5 m-1 my-10" data-aos="fade-left">
       <Tabs value="html" >
         <TabsHeader defaultChecked={true}>
           {data.map(({ label, value }) => (

@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -80,33 +84,42 @@ const cardData = [
 ];
 
 export default function TopFranchiseOpportunieties() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div>
       <div className="mt-28">
         <div className="relative px-9">
-          <div>
-            <p className="absolute py-2 top-[-15px] bg-black text-white left-8 px-5 rounded-lg font-bold">
+          <div data-aos="flip-up">
+            <p className="absolute py-2 top-[-15px] bg-black text-white left- px-5 rounded-lg font-bold">
               TOP FRANCHISE OPPORTUNITIES
             </p>
-            <div className="h-[1px] bg-gray-500 mb-1"></div>
-            <div className="h-[1px] bg-gray-600"></div>
+            <div className="h-[1px] bg-white mb-1"></div>
+            <div className="h-[1.5px] bg-white"></div>
           </div>
 
-          <div className="py-20">
+          <div
+            className="py-20"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
             <Carousel
-                 className=" "
-                 responsive={responsive}
-                 autoPlay={true}
-                 infinite
-                 swipeable={true}
-                 removeArrowOnDeviceType={["tablet", "mobile"]}
-                 draggable={true}
-                 autoPlaySpeed={3000}
+              className=" "
+              responsive={responsive}
+              autoPlay={true}
+              infinite
+              swipeable={true}
+              removeArrowOnDeviceType={["tablet", "mobile"]}
+              draggable={true}
+              autoPlaySpeed={3000}
             >
               {cardData.map((item, index) => {
                 return (
                   <>
-                    <EcommerceCard2 data={item} key={index}/>
+                    <EcommerceCard2 data={item} key={index} />
                   </>
                 );
               })}

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AutoMobile = [
   { title: "AUTOMOBILE" },
@@ -160,7 +162,7 @@ export default function Videos() {
   return (
     <>
       <div className="text-center my-8">
-        <h1 className="font-bold text-[29px]">VIDEOS</h1>
+        <h1 className="font-bold text-[29px] text-white">VIDEOS</h1>
       </div>
 
       <div>
@@ -178,16 +180,20 @@ export default function Videos() {
 }
 
 const VideoCards = ({ data }) => {
-  console.log(data);
+
+  useEffect(() => {
+    AOS.init({duration: 2000})
+  }, []);
+
   return (
     <div>
-      <div className=" mx-4 md:mx-12">
-        <div className="relative py-6">
+      <div className=" mx-4 md:mx-12" data-aos="zoom-in">
+        <div className="relative py-6"  data-aos="flip-down">
           <p className="py-2 px-6 rounded-xl bg-black text-white font-bold absolute top-2">
             {data[0].title}
           </p>
-          <div className="h-[2px] bg-gray-500 mb-[2px]"></div>
-          <div className="h-[2px] bg-gray-500"></div>
+          <div className="h-[2px] bg-white mb-[2px]"></div>
+          <div className="h-[2px] bg-white"></div>
         </div>
 
         <div className="flex flex-wrap gap-1 my-5 mb-20">

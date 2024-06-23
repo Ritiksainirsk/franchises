@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
 
 import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Typography,
-  Button,
 } from "@material-tailwind/react";
 
 const responsive = {
@@ -33,14 +35,20 @@ const responsive = {
 
 
 
+
 export default function MultiCityFranchises() {
+
+  useEffect(() => {
+    AOS.init({duration: 2000})
+  }, []);
+
   return (
     <>
       <div className="lg:flex lg:gap-3 m-5">
-        <div className="md:w-[50%] p-4 lg:shadow-2xl rounded-2xl border-2 py-7">
+        <div className=" md:w-[50%] p-4 lg:shadow-2xl rounded-2xl shadow-2xl border-[1px] py-7"  data-aos="fade-right">
           <h2
-            className="text-center mb-5 font-bold md:text-lg font-sans border-2 rounded-2xl"
-            style={{ textShadow: "3px 2px #b9fdff" }}
+            className="text-center mb-5 md:text-lg py-1  font-sans border-[1px] rounded-2xl text-white"
+            // style={{ textShadow: "3px 2px #fff" }}
           >
             UPCOMING MULTI-CITY FRANCHISE SHOW
           </h2>
@@ -60,10 +68,9 @@ export default function MultiCityFranchises() {
           </Carousel>
         </div>
 
-        <div className=" md:w-[50%] p-4 lg:shadow-2xl rounded-2xl border-2 py-7">
+        <div className=" md:w-[50%] p-4 lg:shadow-2xl rounded-2xl shadow-2xl border-[1px] py-7" data-aos="fade-left">
           <h2
-            className="text-center mb-5 font-bold md:text-lg  font-sans border-2 rounded-2xl"
-            style={{ textShadow: "3px 2px #b9fdff" }}
+            className="text-center mb-5 md:text-lg p-1 font-sans border-[1px] rounded-2xl text-white"
           >
             PAST MULTI-CITY FRANCHISE SHOW
           </h2>
@@ -91,7 +98,7 @@ export default function MultiCityFranchises() {
 
 function EcommerceCard() {
   return (
-    <Card className="w-64 shadow-md m-6">
+    <Card className="w-64 shadow-md m-6 ">
       <CardHeader
         shadow={true}
         floated={true}

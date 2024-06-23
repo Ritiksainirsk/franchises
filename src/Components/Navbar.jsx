@@ -84,15 +84,13 @@ function NavListMenu({ Title, data }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = data.map((item, key) => (
-    <a href="#" key={key}>
-      <MenuItem className="">
+      <MenuItem className="text-black">
         <Link to={"/existingbusiness"}>
           <div>
             <Typography className="">{item.title}</Typography>
           </div>
         </Link>
       </MenuItem>
-    </a>
   ));
 
   return (
@@ -149,12 +147,12 @@ function NavList() {
         className="font-medium"
       >
         <Link to={"/"} smo>
-          {" "}
           <ListItem className="flex items-center gap-2 py-2 pr-4">
             Home
           </ListItem>
         </Link>
       </Typography>
+
       <NavListMenu
         Title={"Buy/ Sell Existing Business"}
         data={BuySellingMenuItems}
@@ -262,7 +260,7 @@ export function Navbarr() {
     <>
       <div className="flex justify-center">
         <Navbar
-          className={`px-4 py-2 z-40 w-full ${
+          className={`px-4 py-2 z-40 w-full bg-[#3ca0c836] border-none ${
             isFixed ? "fixed top-0 m-auto" : " "
           }`}
         >
@@ -273,7 +271,7 @@ export function Navbarr() {
             <div className="hidden gap-2 lg:flex">
               <Link to="/brand_registration">
                 {" "}
-                <Button variant="text" size="sm" color="blue-gray">
+                <Button variant="text" size="sm" color="blue-gray" className="text-white">
                   Log In
                 </Button>
               </Link>
@@ -313,11 +311,11 @@ export function Navbarr() {
 
       {/*  */}
 
-      <div className="shadow-sm ">
+      <div className="shadow-sm">
         <form className="md:flex items-center justify-around py-3 md:p-1">
           <div className="flex md:block justify-center">
-            <p>Become Our Channel Partner :</p>
-            <button className="font-bold font-sans float-end pr-3 hover:pr-1 text-red-400 hover:text-black transition-all duration-500">
+            <p className="text-white">Become Our Channel Partner :</p>
+            <button className="font-bold font-sans float-end pr-3 hover:pr-1 text-red-600 hover:text-white transition-all duration-500">
               Register Now
             </button>
           </div>
@@ -354,7 +352,7 @@ export function Navbarr() {
             <div>
               <button
                 type="submit"
-                className="btn bg-black text-white shadow-none text-[0.8rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 hover:bg-black w-28"
+                className="btn bg-black border-none text-white shadow-none text-[0.8rem] hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 hover:bg-black w-28"
               >
                 Search
               </button>
@@ -377,13 +375,13 @@ export function Navbarr() {
 }
 
 function Opportunities({ title, color }) {
-  console.log(color);
+
   return (
     <>
       <div class="row">
         <div class="formainone flex flex-col text-center">
-          <span> {title}</span>
-          <strong className={`text-[${color}]`}>Opportunities</strong>
+          <span className="text-white"> {title}</span>
+          <strong className={`text-white`}>Opportunities</strong>
           <Button
             ripple={false}
             fullWidth={true}

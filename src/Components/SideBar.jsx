@@ -35,13 +35,13 @@ export default function SideBar() {
               aria-label="close sidebar"
               className="drawer-overlay"
             ></label>
-            <ul className="menu h-[100%] lg:h-auto p-4 w-80  bg-base-200 text-base-content">
+            <ul className="menu h-[100%] lg:h-auto p-4 w-80  bg-[#ffffff9d] text-base-content">
               {/* Sidebar content here */}
               {ourFranchises.map((franchise) => {
                 return (
                   <>
                     <li>
-                      <a>{franchise.franchise}</a>
+                      <a style={{textDecoration:"none"}}>{franchise.franchise}</a>
                     </li>
                   </>
                 );
@@ -50,7 +50,7 @@ export default function SideBar() {
           </div>
         </div>
         {/*  */}
-        <div className="bg-[#cee9ea] h-36 md:h-80 w-full px-3 md:px-6 rounded-2xl mt-5">
+        <div className="bg-[#cee9ea9c] h-36 md:h-80 w-full px-3 md:px-6 rounded-2xl mt-5">
         <CarouselCustomArrows/>
         </div>
       </div>

@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";
 import { FaSquareTwitter } from "react-icons/fa6";
@@ -8,15 +11,21 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 
 export default function Footer() {
+
+  useEffect(() => {
+    AOS.init({duration: 2000})
+  }, []);
+
+
   return (
     <>
       {/*  */}
-      <footer className="footer p-10 bg-[#64442c] text-white">
-        <nav className="hidden md:block">
+      <footer className="footer p-10 bg-[#6451CE] text-white">
+        <nav className="hidden md:block"  data-aos="fade-right">
           <h6 className="footer-title">BROWSE BY LOCATION</h6>
           <p className="leading-[22px] tracking-wider"><a href="">Andhra Pradesh</a>|<a href="">Arunachal Pradesh</a>|<a href="">Assam</a>|<a href="">Bihar</a>|Chandigarh|Chhattisgarh|Daman Diu|Goa|Gujarat|Haryana|Himachal Pradesh|Jammu Kashmir|Jharkhand|Karnataka|Kerala|Lakshadweep|Madhya Pradesh|Maharashtra|Manipur|Meghalaya|Mizoram|Nagaland|New Delhi|Orissa|Pondicherry|Punjab|Rajasthan|Sikkim|Tamil Nadu|Tripura|Uttaranchal|Uttar Pradesh|West Bengal</p>
         </nav>
-        <form>
+        <form  data-aos="fade-left">
           <h6 className="footer-title">SUBSCRIBE TO OUR NEWSLETTER!</h6>
           <fieldset className="form-control w-80">
             <label className="label">
@@ -34,8 +43,8 @@ export default function Footer() {
         </form>
       </footer>
       {/*  */}
-      <footer className="footer p-10 bg-[#64442c] text-white">
-        <aside>
+      <footer className="footer p-10 bg-[#1C2431] text-white">
+        <aside data-aos="fade-up">
           <div className="p-3 bg-white w-[200px] h-[270px] rounded-lg">
             <img
               className=""
@@ -48,7 +57,7 @@ export default function Footer() {
             Providing reliable tech since 1992
           </p>
         </aside>
-        <nav>
+        <nav data-aos="fade-up">
           <h6 className="footer-title">Our Services</h6>
           <a className="link link-hover hover:text-[#C9302C] " style={{textDecoration:"none",listStyle:"none"}}>Brand Franchise Business Model</a>
           <a className="link link-hover hover:text-[#C9302C]">Franchise Consultancy</a>
@@ -58,7 +67,7 @@ export default function Footer() {
           <a className="link link-hover hover:text-[#C9302C]">Commercial Property Registration</a>
           <a className="link link-hover hover:text-[#C9302C]">Franchise Development Programme</a>
         </nav>
-        <nav>
+        <nav data-aos="fade-up">
           <h6 className="footer-title">Quick Links</h6>
           <a className="link link-hover hover:text-[#C9302C]">Home</a>
           <a className="link link-hover hover:text-[#C9302C]">Buy Premium Franchise</a>
@@ -71,7 +80,7 @@ export default function Footer() {
           <a className="link link-hover hover:text-[#C9302C]">About</a>
           <a className="link link-hover hover:text-[#C9302C]">Terms & Conditions</a>
         </nav>
-        <nav>
+        <nav data-aos="fade-up">
           <h6 className="footer-title">Popular Franchise</h6>
           <a className="link link-hover  hover:text-[#C9302C]">Automobiles</a>
           <a className="link link-hover hover:text-[#C9302C]">Beauty and Salon</a>
@@ -85,20 +94,20 @@ export default function Footer() {
       </footer>
       {/*  */}
       {/*  */}
-      <footer className="footer p-10 bg-[#64442c] text-white">
-        <nav>
+      <footer className="footer p-10 bg-[#1C2431] text-white">
+        <nav data-aos="fade-up">
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>
           <a className="link link-hover">Design</a>
           <a className="link link-hover">Marketing</a>
           <a className="link link-hover">Advertisement</a>
         </nav>
-        <nav>
+        <nav data-aos="fade-up">
           <h6 className="footer-title">Company</h6>
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
         </nav>
-        <nav>
+        <nav data-aos="fade-up">
           <h6 className="footer-title">Social</h6>
           <div className="grid grid-flow-col gap-4">
             <a className="cursor-pointer text-[20px]">
@@ -123,7 +132,7 @@ export default function Footer() {
         </nav>
       </footer>
       {/*  */}
-      <footer className="footer footer-center p-4 bg-gray-800 text-white font-bold">
+      <footer className="footer footer-center p-4 bg-gray-800 text-white font-bold" >
         <aside>
           <p>Copyright © 2009 - 2024 Franchise</p>
         </aside>

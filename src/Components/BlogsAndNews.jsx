@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Popular from "./Popular/Popular";
 import {
   Card,
@@ -10,16 +13,21 @@ import {
 import { FaUser } from "react-icons/fa";
 
 export default function BlogsAndNews() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
       <div className=" m-8">
-        <div className="relative px">
+        <div className="relative px"  data-aos="flip-up">
           <div>
             <p className="absolute top-[-14px] bg-black text-white left-0 px-5 py-2 rounded-lg font-bold">
             BLOGS AND NEWSVIEW ALL
             </p>
-            <div className="h-[2px] bg-gray-500 mb-1"></div>
-            <div className="h-[2px] bg-gray-500"></div>
+            <div className="h-[2px] bg-white mb-1"></div>
+            <div className="h-[2px] bg-white"></div>
             <p className="cursor-pointer hover:right-[-4px] transition-all duration-300 absolute top-[-9px] bg-black text-white right-0 px-5 py-1 rounded-lg text-[12px] font-bold hidden md:block">
                VIEW ALL
             </p>
@@ -28,7 +36,7 @@ export default function BlogsAndNews() {
         {/*  */}
         <div className="lg:grid lg:grid-cols-3 gap-7 my-14">
           <Popular />
-          <div className="col-span-2 bg-white rounded-2xl shadow-xl border-2 lg:p-8 lg:h-[890px]">
+          <div className="col-span-2 bg-white rounded-2xl shadow-xl border-2 lg:p-8 lg:h-[890px]" data-aos="fade-up">
             <Card className="w-full max-w-[100%] flex-col h-[100%] shadow-none">
               <div className="">
                 <img
