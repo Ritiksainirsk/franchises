@@ -172,7 +172,7 @@ export default function Gallary() {
   return (
     <>
     <div className="text-center mt-14" data-aos="zoom-in-up">
-      <h1 className="font-bold text-2xl text-white">GALLERY</h1>
+      <h1 className="font-bold text-2xl text-black">GALLERY</h1>
     </div>
     <div className="lg:m-12 md:m-5 m-1 my-10" data-aos="fade-left">
       <Tabs value="html" >

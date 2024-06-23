@@ -8,7 +8,7 @@ export default function Interviews() {
   return (
     <div>
       <div className="text-center my-12">
-        <h1 className="font-bold text-2xl text-white">INTERVIEWS</h1>
+        <h1 className="font-bold text-2xl text-black">INTERVIEWS</h1>
       </div>
       <div>
         <Card1
@@ -91,11 +91,11 @@ const Card1 = ({ url, name }) => {
           />
         </div>
 
-        <div className="md:col-span-3 text-white">
+        <div className="md:col-span-3 text-black">
           <h2 className="font-bold">
             Q.1. Elaborate about the concept of Peas in pod?
           </h2>
-          <p>
+          <p className="text-gray-600">
             The concept of the "Peas in Pod" centers on creating an exceptional
             learning environment that prioritizes the holistic development of
             each child. This preschool offers a blend of innovative and
@@ -110,7 +110,7 @@ const Card1 = ({ url, name }) => {
             development for staff.
             {showMore && (
               <span>
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   {" "}
                   Q. 2. What kind of business opportunity do you offers to the
                   potential entrepreneurs?
@@ -122,7 +122,7 @@ const Card1 = ({ url, name }) => {
                 and marketing support help franchisees attract and retain
                 students, while our scalable business model offers the potential
                 for growth and expansion into new markets.
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   {" "}
                   Q.3.What is the USP of Peas in pod?
                 </h2>
@@ -136,7 +136,7 @@ const Card1 = ({ url, name }) => {
                 business systems, ongoing training and support, marketing
                 assistance, and access to a network of experienced professionals
                 and resources for continued growth and success.
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   {" "}
                   Q.4.What point of time you thought of expanding via the
                   franchise route? Where do you see yourself in the next 5 year
@@ -149,7 +149,7 @@ const Card1 = ({ url, name }) => {
                 with a network of successful preschool franchises across
                 different locations, contributing positively to early childhood
                 education and making a significant impact in the industry.
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   {" "}
                   Q. 5.Brief us about your entrepreneurial journey so far. Share
                   with us the company's profile?
@@ -162,7 +162,7 @@ const Card1 = ({ url, name }) => {
                 positive feedback from parents and educators, strategic
                 partnerships with industry stakeholders, and a vision for
                 nationwide expansion through franchising.
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   {" "}
                   Q.6. What kind of training and support do you offers to your
                   franchisee?
@@ -177,7 +177,7 @@ const Card1 = ({ url, name }) => {
                 advertising campaigns. Continuous education programs keep
                 franchisees updated on industry trends, new teaching
                 methodologies, and business growth strategies.
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   Q. 7. What are the challenges in this sector and how do you
                   overcome them?
                 </h2>
@@ -191,7 +191,7 @@ const Card1 = ({ url, name }) => {
                 building strong relationships with regulatory authorities, and
                 differentiating your preschool through unique offerings and
                 excellent customer service.
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   Q. 8. What are the major growth drivers of your Brand?
                 </h2>
                 The major growth drivers of our Brand which significantly impact
@@ -207,7 +207,7 @@ const Card1 = ({ url, name }) => {
             >
               {showMore ? "Read Less" : "Read More"}
             </button>
-            <h2 className="font-bold">{name}</h2>
+            <h2 className="font-bold text-black">{name}</h2>
           </p>
         </div>
       </div>
@@ -220,12 +220,12 @@ const Card2 = ({ url, name }) => {
 
   return (
     <>
-      <div className="md:grid flex flex-col-reverse md:grid-cols-4 items-start gap-3 border-[1px] text-white shadow-xl my-10 mx-4 md:p-7 p-4 justify-center rounded-lg"  data-aos="fade-left">
+      <div className="md:grid flex flex-col-reverse md:grid-cols-4 items-start gap-3 border-[1px] text-black shadow-xl my-10 mx-4 md:p-7 p-4 justify-center rounded-lg"  data-aos="fade-left">
         <div className="md:col-span-3">
           <h2 className="font-bold">
             Q.1. Elaborate about the concept of Peas in pod?
           </h2>
-          <p>
+          <p className="text-gray-600">
             The concept of the "Peas in Pod" centers on creating an exceptional
             learning environment that prioritizes the holistic development of
             each child. This preschool offers a blend of innovative and
@@ -240,7 +240,7 @@ const Card2 = ({ url, name }) => {
             development for staff.
             {showMore && (
               <span>
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   {" "}
                   Q. 2. What kind of business opportunity do you offers to the
                   potential entrepreneurs?
@@ -252,7 +252,7 @@ const Card2 = ({ url, name }) => {
                 and marketing support help franchisees attract and retain
                 students, while our scalable business model offers the potential
                 for growth and expansion into new markets.
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   {" "}
                   Q.3.What is the USP of Peas in pod?
                 </h2>
@@ -266,7 +266,7 @@ const Card2 = ({ url, name }) => {
                 business systems, ongoing training and support, marketing
                 assistance, and access to a network of experienced professionals
                 and resources for continued growth and success.
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   {" "}
                   Q.4.What point of time you thought of expanding via the
                   franchise route? Where do you see yourself in the next 5 year
@@ -279,7 +279,7 @@ const Card2 = ({ url, name }) => {
                 with a network of successful preschool franchises across
                 different locations, contributing positively to early childhood
                 education and making a significant impact in the industry.
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   {" "}
                   Q. 5.Brief us about your entrepreneurial journey so far. Share
                   with us the company's profile?
@@ -292,7 +292,7 @@ const Card2 = ({ url, name }) => {
                 positive feedback from parents and educators, strategic
                 partnerships with industry stakeholders, and a vision for
                 nationwide expansion through franchising.
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   {" "}
                   Q.6. What kind of training and support do you offers to your
                   franchisee?
@@ -307,7 +307,7 @@ const Card2 = ({ url, name }) => {
                 advertising campaigns. Continuous education programs keep
                 franchisees updated on industry trends, new teaching
                 methodologies, and business growth strategies.
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   Q. 7. What are the challenges in this sector and how do you
                   overcome them?
                 </h2>
@@ -321,7 +321,7 @@ const Card2 = ({ url, name }) => {
                 building strong relationships with regulatory authorities, and
                 differentiating your preschool through unique offerings and
                 excellent customer service.
-                <h2 className="font-bold">
+                <h2 className="font-bold text-black">
                   Q. 8. What are the major growth drivers of your Brand?
                 </h2>
                 The major growth drivers of our Brand which significantly impact
@@ -337,7 +337,7 @@ const Card2 = ({ url, name }) => {
             >
               {showMore ? "Read Less" : "Read More"}
             </button>
-            <h2 className="font-bold">{name}</h2>
+            <h2 className="font-bold text-black">{name}</h2>
           </p>
         </div>
 

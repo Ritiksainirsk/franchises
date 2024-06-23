@@ -162,7 +162,7 @@ export default function Videos() {
   return (
     <>
       <div className="text-center my-8">
-        <h1 className="font-bold text-[29px] text-white">VIDEOS</h1>
+        <h1 className="font-bold text-[29px] text-black">VIDEOS</h1>
       </div>
 
       <div>
@@ -192,8 +192,8 @@ const VideoCards = ({ data }) => {
           <p className="py-2 px-6 rounded-xl bg-black text-white font-bold absolute top-2">
             {data[0].title}
           </p>
-          <div className="h-[2px] bg-white mb-[2px]"></div>
-          <div className="h-[2px] bg-white"></div>
+          <div className="h-[2px] bg-black mb-[2px]"></div>
+          <div className="h-[2px] bg-black"></div>
         </div>
 
         <div className="flex flex-wrap gap-1 my-5 mb-20">

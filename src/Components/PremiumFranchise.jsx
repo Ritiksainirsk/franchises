@@ -97,8 +97,8 @@ export default function PremiumFranchise() {
             <p className="absolute top-[-14px] py-2 bg-black text-white px-5 rounded-lg font-bold">
               TOP PREMIUM FRANCHISE OPPORTUNITIES
             </p>
-            <div className="h-[2px] bg-white mb-1"></div>
-            <div className="h-[2px] bg-white"></div>
+            <div className="h-[2px] bg-black mb-1"></div>
+            <div className="h-[2px] bg-black"></div>
           </div>
 
           <div className="py-20" 

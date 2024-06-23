@@ -13,7 +13,7 @@ export default function HeaderAdd() {
 
   return (
     <div>
-        {show && <div className="flex flex-wrap items-center justify-center bg-[#EEEEEE] md:gap-9 gap-5 px-2 py-4 " id="sample">
+        {show && <div className="flex flex-wrap items-center justify-center bg-[#FFE9D0] md:gap-9 gap-5 px-2 py-4 " id="sample">
             <div className="col-lg-3 col-sm-12">
               <div className="logo-part md:w-52 w-64">
                    <a href="/">

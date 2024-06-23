@@ -260,7 +260,7 @@ export function Navbarr() {
     <>
       <div className="flex justify-center">
         <Navbar
-          className={`px-4 py-2 z-40 w-full bg-[#3ca0c836] border-none ${
+          className={`px-4 py-2 z-40 w-full border-none ${
             isFixed ? "fixed top-0 m-auto" : " "
           }`}
         >
@@ -271,7 +271,7 @@ export function Navbarr() {
             <div className="hidden gap-2 lg:flex">
               <Link to="/brand_registration">
                 {" "}
-                <Button variant="text" size="sm" color="blue-gray" className="text-white">
+                <Button variant="text" size="sm" color="blue-gray" className="">
                   Log In
                 </Button>
               </Link>
@@ -314,8 +314,8 @@ export function Navbarr() {
       <div className="shadow-sm">
         <form className="md:flex items-center justify-around py-3 md:p-1">
           <div className="flex md:block justify-center">
-            <p className="text-white">Become Our Channel Partner :</p>
-            <button className="font-bold font-sans float-end pr-3 hover:pr-1 text-red-600 hover:text-white transition-all duration-500">
+            <p className="text-black">Become Our Channel Partner :</p>
+            <button className="font-bold font-sans float-end pr-3 hover:pr-1 text-red-600 hover:text-black transition-all duration-500">
               Register Now
             </button>
           </div>
@@ -380,8 +380,8 @@ function Opportunities({ title, color }) {
     <>
       <div class="row">
         <div class="formainone flex flex-col text-center">
-          <span className="text-white"> {title}</span>
-          <strong className={`text-white`}>Opportunities</strong>
+          <span className="text-black"> {title}</span>
+          <strong className={`text-[${color}]`}>Opportunities</strong>
           <Button
             ripple={false}
             fullWidth={true}

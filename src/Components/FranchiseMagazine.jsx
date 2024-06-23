@@ -40,7 +40,7 @@ export default function FranchiseMagazine() {
     <div>
       {/*  */}
       <div className="text-center mt-20 mb-12" data-aos="flip-left">
-        <h1 className="font-bold text-2xl text-white">Franchise Magazine</h1>
+        <h1 className="font-bold text-2xl text-black">Franchise Magazine</h1>
       </div>
       {/*  */}
       <div data-aos="fade-right">
@@ -110,7 +110,7 @@ export default function FranchiseMagazine() {
       {/*  */}
 
       <div
-        className="md:p-10 p-5 md:px-14 tracking-widest text-[10px] md:text-[15px] text-white"
+        className="md:p-10 p-5 md:px-14 tracking-widest text-[10px] md:text-[15px] text-black"
         data-aos="fade-right"
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
@@ -121,7 +121,7 @@ export default function FranchiseMagazine() {
         >
           Top Business Franchise Opportunities In India: Franchise Apply
         </h1>
-        <p className="text-white">
+        <p className="text-gray-600">
           Franchise Apply is your one-stop source where you can grab amazing
           franchise opportunities in India. We are here to help you start your
           own profitable franchise business in India and use test-and-tried ways
@@ -135,7 +135,7 @@ export default function FranchiseMagazine() {
         </p>
         {showtext && (
           <span>
-            <p className="my-4 text-white">
+            <p className="my-4 text-gray-600">
               We have come up as one such destination where investors, startups,
               distributors, dealers, franchise prospect seekers can seek
               opportunities to start the best franchise business in India. Our
@@ -150,7 +150,7 @@ export default function FranchiseMagazine() {
             <h2 className="text-2xl font-bold my-3 text-[1.3rem] md:text-[1.5rem]">
               Grab Abundance of Franchise Opportunities Here!
             </h2>
-            <p className="my-4 text-white">
+            <p className="my-4 text-gray-600">
               If you are someone, who wants to reap the benefits out of
               franchise opportunities in India, Franchise Apply is certainly the
               right place, to begin with. Being an investor if you think that is

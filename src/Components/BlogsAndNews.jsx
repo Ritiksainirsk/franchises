@@ -26,8 +26,8 @@ export default function BlogsAndNews() {
             <p className="absolute top-[-14px] bg-black text-white left-0 px-5 py-2 rounded-lg font-bold">
             BLOGS AND NEWSVIEW ALL
             </p>
-            <div className="h-[2px] bg-white mb-1"></div>
-            <div className="h-[2px] bg-white"></div>
+            <div className="h-[2px] bg-black mb-1"></div>
+            <div className="h-[2px] bg-black"></div>
             <p className="cursor-pointer hover:right-[-4px] transition-all duration-300 absolute top-[-9px] bg-black text-white right-0 px-5 py-1 rounded-lg text-[12px] font-bold hidden md:block">
                VIEW ALL
             </p>

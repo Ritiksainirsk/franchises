@@ -35,7 +35,7 @@ export default function SideBar() {
               aria-label="close sidebar"
               className="drawer-overlay"
             ></label>
-            <ul className="menu h-[100%] lg:h-auto p-4 w-80  bg-[#ffffff9d] text-base-content">
+            <ul className="menu h-[100%] lg:h-auto p-4 w-80  bg-[#ffe9d0a0] text-base-content">
               {/* Sidebar content here */}
               {ourFranchises.map((franchise) => {
                 return (

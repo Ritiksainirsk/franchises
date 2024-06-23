@@ -96,8 +96,8 @@ export default function TopFranchiseOpportunieties() {
             <p className="absolute py-2 top-[-15px] bg-black text-white left- px-5 rounded-lg font-bold">
               TOP FRANCHISE OPPORTUNITIES
             </p>
-            <div className="h-[1px] bg-white mb-1"></div>
-            <div className="h-[1.5px] bg-white"></div>
+            <div className="h-[1px] bg-black mb-1"></div>
+            <div className="h-[1.5px] bg-black"></div>
           </div>
 
           <div

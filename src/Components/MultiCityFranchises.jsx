@@ -45,9 +45,9 @@ export default function MultiCityFranchises() {
   return (
     <>
       <div className="lg:flex lg:gap-3 m-5">
-        <div className=" md:w-[50%] p-4 lg:shadow-2xl rounded-2xl shadow-2xl border-[1px] py-7"  data-aos="fade-right">
+        <div className=" md:w-[50%] p-4 lg:shadow-2xl rounded-2xl shadow-2xl border-[2px] py-7"  data-aos="fade-right">
           <h2
-            className="text-center mb-5 md:text-lg py-1  font-sans border-[1px] rounded-2xl text-white"
+            className="text-center mb-5 md:text-lg py-1  font-sans border-[2px] rounded-2xl text-black"
             // style={{ textShadow: "3px 2px #fff" }}
           >
             UPCOMING MULTI-CITY FRANCHISE SHOW
@@ -68,9 +68,9 @@ export default function MultiCityFranchises() {
           </Carousel>
         </div>
 
-        <div className=" md:w-[50%] p-4 lg:shadow-2xl rounded-2xl shadow-2xl border-[1px] py-7" data-aos="fade-left">
+        <div className=" md:w-[50%] p-4 lg:shadow-2xl rounded-2xl shadow-2xl border-[2px] py-7" data-aos="fade-left">
           <h2
-            className="text-center mb-5 md:text-lg p-1 font-sans border-[1px] rounded-2xl text-white"
+            className="text-center mb-5 md:text-lg p-1 font-sans border-[2px] rounded-2xl text-black"
           >
             PAST MULTI-CITY FRANCHISE SHOW
           </h2>

@@ -72,10 +72,10 @@ export default function ClientTestimonials() {
 
   return (
     <>
-      <div className=" py-5 pb-16 mb-8">
+      <div className=" py-5 pb-16 mb-8 bg-[#ffe9d08b]">
         {/*  */}
         <div className="text-center my-5" data-aos="flip-up">
-          <h2 className="font-bold text-[1.5rem] text-white">CLIENT TESTIMONIALS</h2>
+          <h2 className="font-bold text-[1.5rem]">CLIENT TESTIMONIALS</h2>
         </div>
         {/*  */}
         {/*  */}
